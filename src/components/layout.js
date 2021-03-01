@@ -16,7 +16,7 @@ export default function Layout ({ children }) {
     return (
             <div>
               <header>
-              {/* <Navbar collapseOnSelect expand="lg"> */}
+              
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
                 <div className="logo">
@@ -36,7 +36,7 @@ export default function Layout ({ children }) {
                   <ListLink to="/contact/" className="nav-item active nav-link">Contact</ListLink>
                 </ul>
                 </Navbar.Collapse>
-                {/* </Navbar> */}
+             
               </header>
             {children}
         </div>
