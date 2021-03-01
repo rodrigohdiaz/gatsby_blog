@@ -13,6 +13,14 @@ module.exports = {
         path: "./src/images/",
       },
       __key: "images",
+        resolve: `gatsby-plugin-google-fonts`,
+        options: {
+          fonts: [
+            `Shippori Mincho`,
+            `regular\:400,500,600,800` 
+          ],
+          display: 'swap'
+        
     },
-  ],
-};
+},
+  ]};
