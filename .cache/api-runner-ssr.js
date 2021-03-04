@@ -1,5 +1,6 @@
 var plugins = [{
-      plugin: require('/Users/rodrigodiaz/a-web/bootcamp/blog/node_modules/gatsby-plugin-google-fonts/gatsby-ssr'),
+      name: 'gatsby-plugin-google-fonts',
+      plugin: require('/Users/rodrigodiaz/a-web/bootcamp/gatsby_blog/node_modules/gatsby-plugin-google-fonts/gatsby-ssr'),
       options: {"plugins":[],"fonts":["Shippori Mincho","regular:400,500,600,800"],"display":"swap"},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
@@ -28,11 +29,21 @@ module.exports = (api, args, defaultReturn, argTransform) => {
     if (!plugin.plugin[api]) {
       return undefined
     }
-    const result = plugin.plugin[api](args, plugin.options)
-    if (result && argTransform) {
-      args = argTransform({ args, result })
+    try {
+      const result = plugin.plugin[api](args, plugin.options)
+      if (result && argTransform) {
+        args = argTransform({ args, result })
+      }
+      return result
+    } catch (e) {
+      if (plugin.name !== `default-site-plugin`) {
+        // default-site-plugin is user code and will print proper stack trace,
+        // so no point in annotating error message pointing out which plugin is root of the problem
+        e.message += ` (from plugin: ${plugin.name})`
+      }
+
+      throw e
     }
-    return result
   })
 
   // Filter out undefined results.
