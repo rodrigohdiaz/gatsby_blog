@@ -20,7 +20,13 @@ header {
     width: 100%;
     margin-right: 2rem;
 }
-
+button {
+    position: relative;
+    left: 90%;
+}
+#navbarSupportedContent {
+    text-align: right;
+}
 .logo {
     height: 3rem;
     position: absolute;
@@ -30,6 +36,7 @@ header {
 .nav {
     display: inline-block;
     text-decoration: none;
+    text-align: right;
 }
 
 
