@@ -16,7 +16,6 @@ export default function Layout ({ children }) {
     return (
             <div className="container-fluid text-center">
                 <div className="icons">
-               
                   <a href="https://github.com/rodrigohdiaz" target="_blank"><img src={git} className="icon"></img></a>
                   <a href="https://codepen.io/rodrigohdiaz" target="_blank"><img src={code} className="icon"></img></a>
                   <a href="https://twitter.com/rodrigohdiaz" target="_blank"><img src={twit} className="icon"></img></a>
