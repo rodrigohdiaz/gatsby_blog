@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Nav } from "react-bootstrap";
 import Media from "../components/media"
 
+
 const ListLink = props => (
   <li style={{className:"nav"}}>
     <Link to={props.to}>{props.children}</Link>
@@ -16,12 +17,6 @@ const ListLink = props => (
 export default function Layout ({ children }) {
     return (
       <header>
-        <div className="logo">
-                <ListLink to="/">
-                    <img src={logo} alt="Logo" className="logo"/>
-                </ListLink>
-        </div>
-
         <Nav className="navbar navbar-expand-lg navbar-light bg">
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -32,8 +27,8 @@ export default function Layout ({ children }) {
               <listLink className="nav-item active">
                 <a className="nav-link" href="#">Home</a>
               </listLink>
-              <listLink className="nav-item">
-                <a className="nav-link" href="#">About</a>
+              <listLink  className="nav-item" >
+                <a className="nav-link" href="/about/" >About</a>
               </listLink>
               {/* <listLink className="nav-item">
                 <a className="nav-link" href="#">Gallery</a>
@@ -47,7 +42,15 @@ export default function Layout ({ children }) {
             </ul>
         
           </div>
+
+          <div className="logo">
+                <ListLink to="/">
+                    <img src={logo} alt="Logo" className="logo"/>
+                </ListLink>
+        </div>
+
         </Nav>
+
         <Media></Media>
         </header>
     )

@@ -30,17 +30,19 @@ button {
     text-align: right;
 }
 .logo {
-    height: 3rem;
+    height: 2.7rem;
     position: absolute;
-    left: 2.5rem;
-    margin-top: -0.2rem;;
+    right: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .nav {
     display: inline-block;
     text-decoration: none;
     text-align: right;
+    position: absolute;
     margin-top: -0.2rem;
+    margin-left: 1rem;
 }
 
 
