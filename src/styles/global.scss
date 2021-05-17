@@ -14,9 +14,9 @@ body, html {
 
 h1 {
     font-family: $mincho;
-    // font-size: 7em;
-    position: absolute;
-    top: 40%;
+    font-size: 7em;
+    position: relative;
+    // top: 40%;
     left: 40%;
     color: #FFD700;
 }

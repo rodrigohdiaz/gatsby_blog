@@ -2,4 +2,9 @@ node_modules/
 .cache/
 public
 node_modules
+<<<<<<< HEAD
 
+||||||| 9d3b3ab4
+=======
+node_modules
+>>>>>>> 7e471207a06a1039f3396d40bf2402c1aacea7e4
