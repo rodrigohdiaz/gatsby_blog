@@ -5,6 +5,7 @@ import "../styles/global.scss"
 import logo from "../images/logoR.png"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Nav } from "react-bootstrap";
+import Media from "../components/media"
 
 const ListLink = props => (
   <li style={{className:"nav"}}>
@@ -15,12 +16,13 @@ const ListLink = props => (
 export default function Layout ({ children }) {
     return (
       <header>
-        <Nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <div className="logo">
-              <ListLink to="/">
-                  <img src={logo} alt="Logo" className="logo"/>
-              </ListLink>
-          </div>
+        <div className="logo">
+                <ListLink to="/">
+                    <img src={logo} alt="Logo" className="logo"/>
+                </ListLink>
+        </div>
+
+        <Nav className="navbar navbar-expand-lg navbar-light bg">
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -33,9 +35,9 @@ export default function Layout ({ children }) {
               <listLink className="nav-item">
                 <a className="nav-link" href="#">About</a>
               </listLink>
-              <listLink className="nav-item">
+              {/* <listLink className="nav-item">
                 <a className="nav-link" href="#">Gallery</a>
-              </listLink>
+              </listLink> */}
               <listLink className="nav-item">
                 <a className="nav-link" href="#">Projects</a>
               </listLink>
@@ -46,21 +48,7 @@ export default function Layout ({ children }) {
         
           </div>
         </Nav>
+        <Media></Media>
         </header>
     )
 }
-
-
-{/* <div>
-        //         <ul className="navbar-nav mr-auto">
-        //           <ListLink to="/" className="nav-item active nav-link">Home</ListLink>
-        //           <ListLink to="/about/" className="nav-item active nav-link">About</ListLink>
-        //           <ListLink to="/gallery/" className="nav-item active nav-link">Gallery</ListLink>
-        //           <ListLink to="/projects/" className="nav-item active nav-link">Projects</ListLink>
-        //           <ListLink to="/contact/" className="nav-item active nav-link">Contact</ListLink>
-        //         </ul>
-        //         </Navbar.Collapse>
-             
-        //       </header>
-        //     {children}
-        // </div> */}

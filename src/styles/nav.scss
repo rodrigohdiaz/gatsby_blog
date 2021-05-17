@@ -22,7 +22,9 @@ header {
 }
 button {
     position: relative;
-    left: 90%;
+    height: 3rem;
+    margin-top: 0.2rem;
+    margin-right: 3rem;
 }
 #navbarSupportedContent {
     text-align: right;
@@ -30,13 +32,15 @@ button {
 .logo {
     height: 3rem;
     position: absolute;
-    left: 3rem;
+    left: 2.5rem;
+    margin-top: -0.2rem;;
 }
 
 .nav {
     display: inline-block;
     text-decoration: none;
     text-align: right;
+    margin-top: -0.2rem;
 }
 
 
