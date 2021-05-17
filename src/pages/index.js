@@ -10,7 +10,6 @@ import Media from "../components/media"
 
 
 
-
 export default function Home(props) {
   return (
         <Layout>
